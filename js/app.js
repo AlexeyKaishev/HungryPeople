@@ -3664,6 +3664,7 @@
             spaceBetween: 0,
             autoHeight: true,
             speed: 800,
+            allowTouchMove: true,
             loop: true,
             lazy: true,
             effect: "fade",
@@ -3795,6 +3796,12 @@
         console.log(headerHeight);
         console.log(windowScroll);
         if (windowScroll > headerHeight) header.classList.add("_scroll"); else header.classList.remove("_scroll");
+    }));
+    window.addEventListener("resize", (function(r) {
+        let attribute = document.querySelector(".tabs");
+        let windowInnerW = window.innerWidth;
+        console.log(window.innerWidth);
+        if (windowInnerW > 768) attribute.setAttribute(`data-tabs-animate`, `1000`); else if (windowInnerW < 768) attribute.removeAttribute(`data-tabs-animate`, `1000`);
     }));
     window["FLS"] = true;
     isWebp();

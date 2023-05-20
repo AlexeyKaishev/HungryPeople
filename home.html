@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230515163634">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230520153231">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,7 +127,12 @@
 										<option class="input" value="3">3</option>
 										<option class="input" value="4">4</option>
 									</select>
-									<input autocomplete="off" type="date" name="form[]" data-error="Error" placeholder="Date (mm/dd)" class="input">
+									<!-- <input autocomplete="off" type="date" name="form[]" data-error="Error"
+										placeholder="Date (mm/dd)" class="input"> -->
+									<!-- <input autocomplete="off" type="text" name="form[]" data-error="Error"
+										placeholder="Date (mm/dd)" class="input" onfocus="(this.type='date')"
+										value="Date (mm/dd)"> -->
+									<input autocomplete="off" type="date" name="form[]" data-error="Error" class="input" value="/Date (mm/dd)/">
 									<input autocomplete="off" type="time" name="form[]" data-error="Error" placeholder="Time" class="input">
 									<button type="submit" class="button">BOOK NOW</button>
 								</form>
@@ -240,7 +245,7 @@
 							</div>
 						</div>
 						<div class="body-range__tabs">
-							<div data-tabs="768" data-tabs-animate="1000" class="tabs">
+							<div data-tabs="768" class="tabs">
 								<nav data-tabs-titles class="tabs__navigation">
 									<button type="button" class="tabs__title _tab-active">SOUPE</button>
 									<button type="button" class="tabs__title">PIZZA</button>
@@ -1789,13 +1794,78 @@
 						</div>
 					</div>
 			</section>
+			<section class="events">
+				<div class="events__container">
+					<div class="events__title section-title">PRIVATE EVENTS</div>
+
+					<div class="events__body body-events">
+						<div class="body-events__image block-image block-image_end">
+							<div class="block-image__body block-image__body_before">
+								<div class="block-image__info block-image__info_end">weddings</div><picture><source srcset="img/events/01.webp" type="image/webp"><img src="img/events/01.jpg" alt="events"></picture>
+							</div>
+						</div>
+						<div class="body-events__image block-image block-image_start">
+							<div class="block-image__body block-image__body_after"><picture><source srcset="img/events/02.webp" type="image/webp"><img src="img/events/02.jpg" alt="events"></picture>
+								<div class="block-image__info block-image__info_start">corporate pzrties</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-events__footer section-footer">For private events please call: <span> +40 729
+							131
+							637/+40 726 458 782 </span><a href="#">or use the contact form.</a></div>
+			</section>
+			<section class="gallery">
+				<div class="gallery__container gallery__container_wide">
+					<div class="gallery__body body-gallery">
+						<a href="#" class="body-gallery__link"><picture><source srcset="img/Gallery/02.webp" type="image/webp"><img class="body-gallery__img" src="img/Gallery/02.jpg" alt="02"></picture></a>
+						<a href="#" class="body-gallery__link"><picture><source srcset="img/Gallery/03.webp" type="image/webp"><img class="body-gallery__img" src="img/Gallery/03.jpg" alt="03"></picture></a>
+						<a href="#" class="body-gallery__link"><picture><source srcset="img/Gallery/01.webp" type="image/webp"><img class="body-gallery__img" src="img/Gallery/01.jpg" alt="01"></picture></a>
+						<a href="#" class="body-gallery__link"><picture><source srcset="img/Gallery/04.webp" type="image/webp"><img class="body-gallery__img" src="img/Gallery/04.jpg" alt="04"></picture></a>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<div class="contact__container">
+					<div class="contact__body body-contact">
+						<div class="body-contact__block block">
+							<div class="block-title">CONTACT</div>
+							<div class="block-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Duis at velit maximus, molestie est a, tempor magna.</div>
+						</div>
+					</div>
+					<div class="contact__form form-contact">
+						<form action="#" method="post" class="form-contact__body">
+							<div class="form-contact__input">
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Name" class="input" id="name">
+								<input autocomplete="off" type="email" name="form[]" data-error="Error" placeholder="Email" class="input">
+								<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Phone" class="input">
+							</div>
+							<textarea name="form[]" placeholder="Message" class="textarea"></textarea>
+							<div class="form-contact__footer footer-form">
+								<div class="footer-form__nav nav-form">
+									<a href="#" class="nav-form__mark">5th London Boulevard, U.K.</a>
+									<a href="#" class="nav-form__tel">+40 729 131 637/+40 726 458 782</a>
+									<a href="#" class="nav-form__letter">office@mindblister.com</a>
+								</div>
+								<button type="submit" class="button">SEND MESSAGE</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="map">
+				<div class="map__container map__container_wide">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d740353.8112739115!2d11.105379382535444!3d43.54389441612812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2z0KTQu9C-0YDQtdC90YbQuNGPLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2sua!4v1684583684577!5m2!1sru!2sua" width="1440" height="475" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="footer__body">
+				<p class="footer__copy">© Copyright <span>Mindblister</span> 2019</p>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230515163634"></script>
+	<script src="js/app.min.js?_v=20230520153231"></script>
 </body>
 
 </html>
