@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230520153231">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230522183215">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +56,7 @@
 								<a href="#" class="buttons-restaurant__button">EXPLORE</a>
 							</div>
 						</div>
-						<div class="restaurant__scroll scroll-restaurant">
+						<div title="SCROLL DOWN" class="restaurant__scroll scroll-restaurant">
 							<div class="scroll-restaurant__button"></div>
 						</div>
 					</div>
@@ -120,20 +120,22 @@
 									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Name" class="input" id="name">
 									<input autocomplete="off" type="email" name="form[]" data-error="Error" placeholder="Email" class="input">
 									<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Phone" class="input">
-									<select name="select" id="select" class="input">
-										<option class="input" value="People">People</option>
-										<option class="input" value="1">1</option>
-										<option class="input" value="2">2</option>
-										<option class="input" value="3">3</option>
-										<option class="input" value="4">4</option>
-									</select>
+									<div class="select">
+										<select name="select" id="select" class="input">
+											<option class="input" value="People">People</option>
+											<option class="input" value="1">1</option>
+											<option class="input" value="2">2</option>
+											<option class="input" value="3">3</option>
+											<option class="input" value="4">4</option>
+										</select>
+									</div>
 									<!-- <input autocomplete="off" type="date" name="form[]" data-error="Error"
 										placeholder="Date (mm/dd)" class="input"> -->
 									<!-- <input autocomplete="off" type="text" name="form[]" data-error="Error"
 										placeholder="Date (mm/dd)" class="input" onfocus="(this.type='date')"
 										value="Date (mm/dd)"> -->
-									<input autocomplete="off" type="date" name="form[]" data-error="Error" class="input" value="/Date (mm/dd)/">
-									<input autocomplete="off" type="time" name="form[]" data-error="Error" placeholder="Time" class="input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" class="input" placeholder="Date (mm/dd)" onfocus="this.type='date'" onblur="this.type='text'">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Time" class="input" onfocus="this.type='time'" onblur="this.type='text'">
 									<button type="submit" class="button">BOOK NOW</button>
 								</form>
 							</div>
@@ -1865,7 +1867,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230520153231"></script>
+	<script src="js/app.min.js?_v=20230522183215"></script>
 </body>
 
 </html>
