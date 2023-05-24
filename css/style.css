@@ -141,7 +141,6 @@ textarea {
 }
 
 .input {
-  border-radius: 0 !important;
   width: 100%;
   display: block;
   padding: 0px 20px;
@@ -1204,7 +1203,6 @@ textarea.input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 36px;
 }
 
 .header-restaurant {
@@ -1258,7 +1256,6 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1306,8 +1303,6 @@ textarea.input {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 60px;
-  height: 60px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   -webkit-transition: border-color 0.3s ease 0s;
@@ -1386,8 +1381,9 @@ textarea.input {
       flex-wrap: wrap;
 }
 
-.input {
-  background: #E5E5E5;
+.input,
+.select {
+  background-color: #E5E5E5;
   border-radius: 5px;
   font-weight: 400;
   font-size: 14px;
@@ -1416,33 +1412,16 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  background-image: url("../img/svg/Book/anchor.svg");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s ease 0s;
+  -o-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
 }
 
-.select {
-  position: relative;
-  display: inline-block;
-}
-
-.select:after {
-  content: "▼";
-  padding: 0 8px;
-  font-size: 12px;
-  position: absolute;
-  right: 8px;
-  top: 0;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  width: 10%;
-  height: 100%;
-  pointer-events: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+select:focus {
+  background-image: none;
 }
 
 /*==================SPECIALTIES==========================*/
@@ -1640,7 +1619,13 @@ select {
   line-height: 1.125rem;
   font-weight: 400;
   opacity: 0.5;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  max-width: 250px;
 }
 
 .head-tabs-link {
@@ -2177,8 +2162,24 @@ select {
     width: 850px;
   }
 
+  .content-restaurant {
+    gap: 2.25rem;
+  }
+
   .header-restaurant__title {
     font-size: 6rem;
+  }
+
+  .buttons-restaurant {
+    gap: 2.5rem;
+  }
+
+  .social a {
+    width: 3.75rem;
+  }
+
+  .social a {
+    height: 3.75rem;
   }
 
   .body-about {
@@ -2395,8 +2396,24 @@ select {
     font-size: 1.875rem;
   }
 
+  .content-restaurant {
+    gap: 1.25rem;
+  }
+
   .header-restaurant__title {
     font-size: 3.125rem;
+  }
+
+  .buttons-restaurant {
+    gap: 1.25rem;
+  }
+
+  .social a {
+    width: 2.8125rem;
+  }
+
+  .social a {
+    height: 2.8125rem;
   }
 
   .body-about {
@@ -2684,6 +2701,18 @@ select {
     }
 }
 
+@supports (gap: clamp( 1.25rem , 0.9267676768rem  +  1.6161616162vw , 2.25rem )) {
+    .content-restaurant {
+      gap: clamp( 1.25rem , 0.9267676768rem  +  1.6161616162vw , 2.25rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.9267676768rem  +  1.6161616162vw , 2.25rem )) {
+    .content-restaurant {
+      gap: calc(1.25rem + 1 * (100vw - 20rem) / 61.875);
+    }
+}
+
 @supports (font-size: clamp( 3.125rem , 2.1957070707rem  +  4.6464646465vw , 6rem )) {
     .header-restaurant__title {
       font-size: clamp( 3.125rem , 2.1957070707rem  +  4.6464646465vw , 6rem );
@@ -2693,6 +2722,42 @@ select {
 @supports not (font-size: clamp( 3.125rem , 2.1957070707rem  +  4.6464646465vw , 6rem )) {
     .header-restaurant__title {
       font-size: calc(3.125rem + 2.875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+    .buttons-restaurant {
+      gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+    .buttons-restaurant {
+      gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (width: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem )) {
+    .social a {
+      width: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem );
+    }
+}
+
+@supports not (width: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem )) {
+    .social a {
+      width: calc(2.8125rem + 0.9375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (height: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem )) {
+    .social a {
+      height: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem );
+    }
+}
+
+@supports not (height: clamp( 2.8125rem , 2.509469697rem  +  1.5151515152vw , 3.75rem )) {
+    .social a {
+      height: calc(2.8125rem + 0.9375 * (100vw - 20rem) / 61.875);
     }
 }
 
@@ -3113,6 +3178,10 @@ select {
 
   .social a:hover {
     border-color: #E8C300;
+  }
+
+  option:hover {
+    background-color: #E8C300;
   }
 
   .swiper-pagination-bullet:hover {

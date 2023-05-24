@@ -3428,7 +3428,6 @@
             speed: 800,
             allowTouchMove: true,
             loop: true,
-            lazy: true,
             effect: "fade",
             pagination: {
                 el: ".swiper-pagination",
